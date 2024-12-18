@@ -1,0 +1,40 @@
+A Novel Approach to Improve Software Defect Prediction Accuracy Using Machine Learning
+
+Defect prediction, accuracy, feature selection, machine learning
+
+A_Novel_Approach_to_Improve_Software_Defect_Prediction
+
+
+IEEE Transaction on Machine Learning,Volume:11,Issue Date:19.June.2023
+
+
+a_novel_approach_to_improve_software_defect_prediction
+
+
+software_defect_prediction
+
+
+normal
+minor
+major
+critical
+
+
+
+
+
+
+Fid	
+defect_id	
+creation_date	
+software_name	
+short_description	
+long_description	
+assignee_name	
+reporter_name	
+defect_fix_time		
+status_category	
+resolution_category
+Prediction
+
+
