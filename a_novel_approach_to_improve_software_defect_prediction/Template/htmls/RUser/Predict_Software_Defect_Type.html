@@ -1,0 +1,144 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {color: #FFFFFF}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF SOFTWARE DEFECT TYPE !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="992" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style4">ENTER DATASETS DETAILS HERE !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Fid</div></td>
+                                    <td width="200"><input type="text" name="Fid"></td>
+                                    <td width="340" bgcolor="#FF0000"><div align="center" class="style4">Enter defect_id</div></td>
+                                    <td width="273"><input type="text" name="defect_id"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter creation_date</div></td>
+                                    <td><input name="creation_date" type="text"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter software_name</div></td>
+                                    <td><input type="text" name="software_name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter short_description</div>
+                                    </div></td>
+                                    <td><textarea name="short_description"></textarea></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter long_description</div></td>
+                                    <td><textarea name="long_description"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter assignee_name</div></td>
+                                    <td><input type="text" name="assignee_name"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter reporter_name</div></td>
+                                    <td><input type="text" name="reporter_name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter defect_fix_time	</div></td>
+                                    <td><input type="text" name="defect_fix_time"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter status_category</div></td>
+                                    <td><input type="text" name="status_category"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter resolution_category</div></td>
+                                    <td><input type="text" name="resolution_category"></td>
+                                    <td bgcolor="#FF0000">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td bgcolor="#FFFFFF"><div align="center" class="style4"></div></td>
+                                    <td><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="844" height="71" border="0" align="center" >
+                                    <tr><td width="632" bgcolor="#FF0000"><div align="center"><span class="style6">PREDICTED SOFTWARE DEFECT STATUS </span> <span class="style7">:: --&gt; </span></div></td>
+
+
+
+                                      <td width="202" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center"><strong>{{objs}}</strong></div></td>
+                                    </tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
